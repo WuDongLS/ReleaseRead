@@ -25,4 +25,13 @@ public class UserServiceImpl extends BaseDao implements UserServiceDao {
         }
         return false;
     }
+
+    @Override
+    public boolean updateById(Integer id, User user) {
+        String sql = "update t_user set username = ?,password = ?,email = ? where id = ?";
+        if (update(sql, user.getUsername(), user.getPassword(), user.getEmail(), id) == 1) {
+            return true;
+        }
+        return false;
+    }
 }

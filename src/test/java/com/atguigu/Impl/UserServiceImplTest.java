@@ -24,4 +24,9 @@ public class UserServiceImplTest {
     public void existsUsername() {
         System.out.println(userService.existsUsername("十三"));
     }
+
+    @Test
+    public void updateById() {
+        System.out.println(userService.updateById(5,new User(null,"梅花十三","13","13@163.com")));
+    }
 }

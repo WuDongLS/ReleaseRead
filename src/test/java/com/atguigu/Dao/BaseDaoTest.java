@@ -11,8 +11,9 @@ public class BaseDaoTest {
     BaseDao baseDao = new BaseDao();
     @Test
     public void update() {
-        String sql = "insert into t_user(id,username,password,email) values (?,?,?,?)";
-        baseDao.update(sql,3,"阿七","666","666@163.com");
+//        String sql = "insert into t_user(id,username,password,email) values (?,?,?,?)";
+        String sql = "update t_user set username = ?,password = ? WHERE id = ?";
+        baseDao.update(sql,"❀十三","66",5);
     }
 
     @Test

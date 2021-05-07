@@ -7,5 +7,5 @@ public interface UserServiceDao {
     public User login(User user);
     public boolean existsUsername(String username);
     //如何实现修改用户信息
-    //public boolean update(String username,User user);
+    public boolean updateById(Integer id,User user);
 }
