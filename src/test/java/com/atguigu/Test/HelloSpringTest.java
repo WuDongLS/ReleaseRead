@@ -23,6 +23,8 @@ public class HelloSpringTest {
         //使用prototype的引用为a38d7a3 a38d7a3
         ApplicationContext context = new ClassPathXmlApplicationContext("META-INF/applicationContext.xml");
         HelloSpring helloSpring = (HelloSpring)context.getBean("helloNew");
+        UserTest user = context.getBean("user", UserTest.class);
         helloSpring.show();
+        user.show();
     }
 }
