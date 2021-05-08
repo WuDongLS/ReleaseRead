@@ -1,36 +1,44 @@
 package com.atguigu.Test;
 
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+import javax.annotation.Resource;
+
+@Component("user")
 public class UserTest {
-    private String username;
-    private String password;
-    private String addr;
 
-    public UserTest(String addr) {
-        this.addr = addr;
+    @Value("十三")
+    private String name;
+    @Autowired(required = false)
+    @Qualifier("user1")
+//    @Resource(name = "user1")
+    private User1 user1;
+
+    public String getName() {
+        return name;
     }
 
-    public String getUsername() {
-        return username;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public User1 getUser1() {
+        return user1;
     }
 
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
+    public void setUser1(User1 user1) {
+        this.user1 = user1;
     }
 
     @Override
     public String toString() {
         return "UserTest{" +
-                "username='" + username + '\'' +
-                ", password='" + password + '\'' +
+                "name='" + name + '\'' +
+                ", user1=" + user1.push() +
                 '}';
     }
 
