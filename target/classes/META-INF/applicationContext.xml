@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="hello" name="helloNew" class="com.atguigu.Test.HelloSpring" scope="prototype">
+        <property name="name" value="梅花十三"></property>
+        <property name="addr"><null/></property>
+        <property name="habits">
+            <array>
+                <value>Java</value>
+                <value>push</value>
+            </array>
+        </property>
+        <property name="courses">
+            <list>
+                <value>计算机</value>
+                <value>网络</value>
+            </list>
+        </property>
+        <property name="grades">
+            <map>
+                <entry key="计算机" value="80"></entry>
+                <entry key="网络" value="90"></entry>
+            </map>
+        </property>
+        <property name="changes">
+            <set>
+                <value>better</value>
+                <value>stronger</value>
+            </set>
+        </property>
+        <property name="pro">
+            <props>
+                <prop key="user">root</prop>
+                <prop key="password">root</prop>
+            </props>
+        </property>
+    </bean>
+</beans>
