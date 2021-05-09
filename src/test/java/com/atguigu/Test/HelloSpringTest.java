@@ -50,8 +50,16 @@ public class HelloSpringTest {
 //        ApplicationContext context = new AnnotationConfigApplicationContext(Configruation.class);
 //        UserTest user = context.getBean("user", UserTest.class);
 //        user.show();
-        ApplicationContext context = new ClassPathXmlApplicationContext("META-INF/applicationContext.xml");
-        AopAnnotation aop = context.getBean("aop", AopAnnotation.class);
+
+    }
+
+    @Test
+    public void test(){
+//        ApplicationContext context = new ClassPathXmlApplicationContext("META-INF/applicationContext.xml");
+//        AopT aop = (AopT)context.getBean("aop");
+//        aop.eat();
+        ApplicationContext context = new AnnotationConfigApplicationContext(Configruations.class);
+        AopT aop = (AopT) context.getBean("aop");
         aop.eat();
     }
 }
