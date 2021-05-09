@@ -2,6 +2,7 @@ package com.atguigu.Test;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import com.alibaba.druid.pool.DruidPooledConnection;
+import com.atguigu.Pojo.User;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -55,11 +56,12 @@ public class HelloSpringTest {
 
     @Test
     public void test(){
-//        ApplicationContext context = new ClassPathXmlApplicationContext("META-INF/applicationContext.xml");
-//        AopT aop = (AopT)context.getBean("aop");
+        ApplicationContext context = new ClassPathXmlApplicationContext("META-INF/bean.xml");
+        BooksService booksService = context.getBean("booksService", BooksService.class);
+        User user = new User(null,"六七","67","67@qq.com");
+        booksService.addUser(user);
+//        ApplicationContext context = new AnnotationConfigApplicationContext(Configruations.class);
+//        AopT aop = (AopT) context.getBean("aop");
 //        aop.eat();
-        ApplicationContext context = new AnnotationConfigApplicationContext(Configruations.class);
-        AopT aop = (AopT) context.getBean("aop");
-        aop.eat();
     }
 }

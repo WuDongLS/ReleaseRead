@@ -53,11 +53,28 @@
 <!--    </dependency>-->
 
     <!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
-<!--    <dependency>-->
-<!--      <groupId>org.springframework</groupId>-->
-<!--      <artifactId>spring-jdbc</artifactId>-->
-<!--      <version>5.2.0.RELEASE</version>-->
-<!--    </dependency>-->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-jdbc</artifactId>
+      <version>5.2.0.RELEASE</version>
+    </dependency>
+
+    <!--jdbcTemplate需要的依赖-->
+    <!-- https://mvnrepository.com/artifact/org.springframework/spring-tx -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-tx</artifactId>
+      <version>5.2.6.RELEASE</version>
+    </dependency>
+
+    <!--jdbcTemplate需要的依赖-->
+    <!-- https://mvnrepository.com/artifact/org.springframework/spring-orm -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-orm</artifactId>
+      <version>5.2.6.RELEASE</version>
+    </dependency>
+
 
     <dependency>
       <groupId>org.springframework</groupId>
