@@ -47,8 +47,11 @@ public class HelloSpringTest {
 //            }
 //        }
 //        helloSpring.show();
-        ApplicationContext context = new AnnotationConfigApplicationContext(Configruation.class);
-        UserTest user = context.getBean("user", UserTest.class);
-        user.show();
+//        ApplicationContext context = new AnnotationConfigApplicationContext(Configruation.class);
+//        UserTest user = context.getBean("user", UserTest.class);
+//        user.show();
+        ApplicationContext context = new ClassPathXmlApplicationContext("META-INF/applicationContext.xml");
+        AopAnnotation aop = context.getBean("aop", AopAnnotation.class);
+        aop.eat();
     }
 }
