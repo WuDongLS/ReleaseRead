@@ -8,6 +8,8 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.jdbc.datasource.DataSourceTransactionManager;
+import org.springframework.transaction.PlatformTransactionManager;
 
 import java.sql.Connection;
 
@@ -54,14 +56,26 @@ public class HelloSpringTest {
 
     }
 
+
     @Test
     public void test(){
         ApplicationContext context = new ClassPathXmlApplicationContext("META-INF/bean.xml");
-        BooksService booksService = context.getBean("booksService", BooksService.class);
-        User user = new User(null,"六七","67","67@qq.com");
-        booksService.addUser(user);
+//        BooksService booksService = context.getBean("booksService", BooksService.class);
+//        DataSourceTransactionManager dataSourceTransaction = context.getBean("dataSourceTransaction", DataSourceTransactionManager.class);
+//        System.out.println(dataSourceTransaction);
+
+//        User user = new User(null,"六七","67","67@qq.com");
+//        booksService.addUser(user);
 //        ApplicationContext context = new AnnotationConfigApplicationContext(Configruations.class);
 //        AopT aop = (AopT) context.getBean("aop");
 //        aop.eat();
     }
+
+    @Test
+    public void test1(){
+        ApplicationContext context = new ClassPathXmlApplicationContext("META-INF/bean1.xml");
+        BookServiceWithTransaction services = context.getBean("services", BookServiceWithTransaction.class);
+        services.change();
+    }
+
 }
