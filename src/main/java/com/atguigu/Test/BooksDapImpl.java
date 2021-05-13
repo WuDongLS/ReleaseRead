@@ -23,8 +23,7 @@ public class BooksDapImpl implements BooksDao{
     @Override
     public void change() {
         String sql = "delete from t_user where id = ?";
-
-        jdbcTemplate.update(sql,10);
+        jdbcTemplate.update(sql,12);
     }
 
 

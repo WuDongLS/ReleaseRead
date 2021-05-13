@@ -7,20 +7,20 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service("services")
-@Transactional
+//@Transactional
 public class BookServiceWithTransaction {
 
     @Autowired
     BooksDao booksDao;
 
     public void addUser() {
-        User user = new User(null,"七七七","777","qq");
+        User user = new User(null,"七七七七","777","qq");
         booksDao.addUser(user);
     }
 
     public void change(){
         addUser();
-//        int i = 10/0;
+        int i = 10/0;
         booksDao.change();
     }
 }
