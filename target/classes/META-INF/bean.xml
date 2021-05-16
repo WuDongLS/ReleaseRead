@@ -71,6 +71,7 @@
         <property name="password" value="${jdbc.password}"></property>
         <property name="initialSize" value="${jdbc.initialSize}"></property>
         <property name="maxActive" value="${jdbc.maxActive}"></property>
+
     </bean>
 
     <!--创建JdbcTemplate对象-->

@@ -46,11 +46,19 @@
     </dependency>
 
     <!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
-<!--    <dependency>-->
-<!--      <groupId>org.springframework</groupId>-->
-<!--      <artifactId>spring-webmvc</artifactId>-->
-<!--      <version>5.2.0.RELEASE</version>-->
-<!--    </dependency>-->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-webmvc</artifactId>
+      <version>5.2.0.RELEASE</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.springframework/spring-web -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-web</artifactId>
+      <version>5.2.0.RELEASE</version>
+    </dependency>
+
 
     <!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
     <dependency>
@@ -66,6 +74,15 @@
       <artifactId>spring-tx</artifactId>
       <version>5.2.6.RELEASE</version>
     </dependency>
+
+
+    <!-- https://mvnrepository.com/artifact/commons-logging/commons-logging -->
+    <dependency>
+      <groupId>commons-logging</groupId>
+      <artifactId>commons-logging</artifactId>
+      <version>1.1.1</version>
+    </dependency>
+
 
     <!--jdbcTemplate需要的依赖-->
     <!-- https://mvnrepository.com/artifact/org.springframework/spring-orm -->

@@ -7,6 +7,7 @@ public class User {
     private String email;
 
     public User() {
+        System.out.println("无参User构造器");
     }
 
     public User(Integer id, String username, String password, String email) {
